@@ -1,0 +1,15 @@
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/bin/Debug/net9.0/LawFirm__SimpleSolution
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/bin/Debug/net9.0/LawFirm__SimpleSolution.deps.json
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/bin/Debug/net9.0/LawFirm__SimpleSolution.runtimeconfig.json
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/bin/Debug/net9.0/LawFirm__SimpleSolution.dll
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/bin/Debug/net9.0/LawFirm__SimpleSolution.pdb
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.AssemblyInfoInputs.cache
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.AssemblyInfo.cs
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.csproj.CoreCompileInputs.cache
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.sourcelink.json
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.dll
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/refint/LawFirm__SimpleSolution.dll
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.pdb
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/LawFirm__SimpleSolution.genruntimeconfig.cache
+/Users/raul/RiderProjects/LawFirm__SimpleSolution/LawFirm__SimpleSolution/obj/Debug/net9.0/ref/LawFirm__SimpleSolution.dll
