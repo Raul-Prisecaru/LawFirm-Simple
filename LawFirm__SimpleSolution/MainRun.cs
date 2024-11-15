@@ -12,5 +12,26 @@ class MainRun
         Console.WriteLine("[4] - Delete Entry");
 
         int user_option = Convert.ToInt32(Console.ReadLine());
+
+        switch (user_option)
+        {
+            case 1:
+                Console.WriteLine("You have Chosen to Create Entry");
+                break;
+            
+            case 2:
+                Console.WriteLine("You have Chosen to Read Entry");
+                break;
+            
+            case 3:
+                Console.WriteLine("You have chosen to Update Entry");
+                break;
+            
+            case 4:
+                Console.WriteLine("You have chosen to Delete Entry");
+                break;
+        }
+        
+        
     }
 }
