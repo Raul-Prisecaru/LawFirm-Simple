@@ -6,15 +6,17 @@ public class CreateDatabase
 {
     void CreateClients()
     {
-        var databaseLocation = "Data Source=test.db";
-        using (var connection = new SqliteConnection(databaseLocation))
+        try
         {
-            connection.Open();
-            Console.WriteLine("Connected to the Database");
+            var databaseLocation = "Data Source=LawFirmDatabase.db";
+            using (var connection = new SqliteConnection(databaseLocation))
+            {
+                connection.Open();
+                Console.WriteLine("Connected to the Database");
 
-            var createCommand = connection.CreateCommand();
+                var createCommand = connection.CreateCommand();
 
-            createCommand.CommandText = @"
+                createCommand.CommandText = @"
                 CREATE TABLE IF NOT EXISTS clients (
                     client_id INTEGER PRIMARY KEY,
                     client_name TEXT NOT NULL,
@@ -22,9 +24,16 @@ public class CreateDatabase
                     client_phone TEXT,
                     client_emai TEXT
                 ) ";
-            createCommand.ExecuteNonQuery();
+                createCommand.ExecuteNonQuery();
             
-            Console.WriteLine("Created Client Table");
+                Console.WriteLine("Created Client Table");
+            }
+
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+
     }
 }
