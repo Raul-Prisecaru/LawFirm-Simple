@@ -110,12 +110,13 @@ public class CreateDatabase
                 
                 // SQL Query to Create Table
                 command.CommandText = @"
-                CREATE TABLE IF NOT EXISTS clients (
-                    client_id INTEGER PRIMARY KEY,
-                    client_name TEXT NOT NULL,
-                    client_address TEXT,
-                    client_phone TEXT,
-                    client_emai TEXT
+                CREATE TABLE IF NOT EXISTS documents (
+                    document_id INTEGER PRIMARY KEY,
+                    case_id INTEGER,
+                    document_name TEXT NOT NULL,
+                    document_type TEXT,
+                    document_path TEXT,
+                    FOREIGN KEY (case_id) REFERENCES cases(case_id) ON DELETE CASCADE
                 ) ";
                 
                 // Executing Query that is not expected to return results
