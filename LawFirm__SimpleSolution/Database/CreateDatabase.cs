@@ -12,6 +12,7 @@ public class CreateDatabase
         {
             // Defining Location of the Database
             var databaseLocation = "Data Source=LawFirmDatabase.db";
+            
             // Creating an instance of the db and Close the db once done
             using (var connection = new SqliteConnection(databaseLocation))
             {
@@ -82,13 +83,13 @@ public class CreateDatabase
             
                 Console.WriteLine("Created Cases Table");
             }
-
+    
         }
         catch (Exception e)
         {
             Console.WriteLine("There has been an error that occured: " + e);
         }
-
+    
     }
     
     public void CreateLegalDocumentsTable()
@@ -124,13 +125,13 @@ public class CreateDatabase
             
                 Console.WriteLine("Created Client Table");
             }
-
+    
         }
         catch (Exception e)
         {
             Console.WriteLine("There has been an error that occured: " + e);
         }
-
+    
     }
     
     public void CreateDatesTable()
@@ -165,12 +166,28 @@ public class CreateDatabase
             
                 Console.WriteLine("Created Client Table");
             }
-
+    
         }
         catch (Exception e)
         {
             Console.WriteLine("There has been an error that occured: " + e);
         }
+    
+    }
 
+
+    public void createTables()
+    {
+        try
+        {
+            CreateClientsTable();
+            CreateCasesTable();
+            CreateLegalDocumentsTable();
+            CreateDatesTable();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }
