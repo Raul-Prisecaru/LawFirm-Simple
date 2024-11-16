@@ -65,7 +65,7 @@ public class CreateDatabase
                 
                 // SQL Query to Create Table
                 command.CommandText = @"
-                CREATE TABLE IF NOT EXISTS clients (
+                CREATE TABLE IF NOT EXISTS cases (
                     case_id INTEGER PRIMARY KEY,
                     case_number TEXT UNIQUE,
                     case_title TEXT NOT NULL,
