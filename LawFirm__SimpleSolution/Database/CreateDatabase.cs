@@ -5,7 +5,7 @@ namespace LawFirm__SimpleSolution.Database;
 public class CreateDatabase
 {
     // Method for creating Client Table
-    void CreateClientsTable()
+    public void CreateClientsTable()
     {
         // Error Handling
         try
@@ -46,7 +46,7 @@ public class CreateDatabase
 
     }
     
-    void CreateCasesTable()
+    public void CreateCasesTable()
     {
         // Error Handling
         try
@@ -91,7 +91,7 @@ public class CreateDatabase
 
     }
     
-    void CreateLegalDocumentsTable()
+    public void CreateLegalDocumentsTable()
     {
         // Error Handling
         try
@@ -133,7 +133,7 @@ public class CreateDatabase
 
     }
     
-    void CreateDatesTable()
+    public void CreateDatesTable()
     {
         // Error Handling
         try
