@@ -73,7 +73,7 @@ public class CreateDatabase
                     case_status TEXT,
                     date_filed DATE,
                     date_closed DATE,
-                    client_id INTEGER
+                    client_id INTEGER,
                     FOREIGN KEY (client_id) REFERENCES clients(client_id) ON DELETE SET NULL
                 ) ";
                 
