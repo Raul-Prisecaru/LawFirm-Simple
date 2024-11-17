@@ -30,7 +30,7 @@ public class CreateDatabase
                     client_name TEXT NOT NULL,
                     client_address TEXT,
                     client_phone TEXT,
-                    client_emai TEXT
+                    client_email TEXT
                 ) ";
                 
                 // Executing Query that is not expected to return results
