@@ -1,9 +1,15 @@
-﻿namespace LawFirm__SimpleSolution;
+﻿using LawFirm__SimpleSolution.Database;
+
+namespace LawFirm__SimpleSolution;
 
 class MainRun
 {
     static void Main(string[] args)
     {
+        CreateDatabase createDatabase = new CreateDatabase();
+        InsertDatabase insertData = new InsertDatabase();
+        createDatabase.createTables();
+        
         Console.WriteLine("Welcome to Law's Firm Management System");
         Console.WriteLine("What would you like to do?");
         Console.WriteLine("[1] - Create Entry");
@@ -18,7 +24,6 @@ class MainRun
             case 1:
                 Console.WriteLine("You have Chosen to Create Entry");
                 break;
-            
             case 2:
                 Console.WriteLine("You have Chosen to Read Entry");
                 break;
