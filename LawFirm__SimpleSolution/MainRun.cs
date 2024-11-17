@@ -8,6 +8,7 @@ class MainRun
     {
         CreateDatabase createDatabase = new CreateDatabase();
         InsertDatabase insertData = new InsertDatabase();
+        ReadDatabase readDatabase = new ReadDatabase();
         createDatabase.createTables();
         
         Console.WriteLine("Welcome to Law's Firm Management System");
@@ -23,9 +24,12 @@ class MainRun
         {
             case 1:
                 Console.WriteLine("You have Chosen to Create Entry");
+                createDatabase.createTables();
+                insertData.InsertClientsTable("Test", "test", "test", "test");
                 break;
             case 2:
                 Console.WriteLine("You have Chosen to Read Entry");
+                readDatabase.ReadClientsTable();
                 break;
             
             case 3:
