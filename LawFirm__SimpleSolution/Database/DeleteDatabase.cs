@@ -43,7 +43,7 @@ public class DeleteDatabase
     }
 
     // Method for Inserting into Client Table
-    public void InsertCasesTable(Int32 caseID)
+    public void DeleteCasesTable(Int32 caseID)
     {
         // Error Handling
         try
@@ -81,7 +81,7 @@ public class DeleteDatabase
 
     }
 
-    public void InsertDocumentTable(Int32 documentid)
+    public void DeleteDocumentTable(Int32 documentid)
     {
         // Error Handling
         try
@@ -118,7 +118,7 @@ public class DeleteDatabase
 
     }
 
-    public void InsertDateTable(Int32 dateid)
+    public void DeleteDateTable(Int32 dateid)
     {
         // Error Handling
         try
