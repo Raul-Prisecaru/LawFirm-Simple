@@ -4,8 +4,8 @@ namespace LawFirm__SimpleSolution.Database;
 
 public class DeleteDatabase
 {
-    // Method for Inserting into Client Table
-    public void InsertClientsTable(String clientName, String clientAddress, String clientPhone, String clientEmail)
+    // Method for Deleting into Client Table
+    public void DeleteClientsTable(Int32 clientid)
     {
         // Error Handling
         try
@@ -24,18 +24,14 @@ public class DeleteDatabase
                 var command = connection.CreateCommand();
                 
                 // SQL Query to Create Table
-                command.CommandText = @"
-                    INSERT INTO clients (client_name, client_address, client_phone, client_email) VALUES (@client_name, @client_address, @client_phone, @client_email)";
+                command.CommandText = @"DELETE FROM clients WHERE client_id = @clientid";
 
-                command.Parameters.AddWithValue("@client_name", clientName);
-                command.Parameters.AddWithValue("@client_address", clientAddress);
-                command.Parameters.AddWithValue("@client_phone", clientPhone);
-                command.Parameters.AddWithValue("@client_email", clientEmail);
+                command.Parameters.AddWithValue("@clientid", clientid);
 
                 // Executing Query that is not expected to return results
                 command.ExecuteNonQuery();
             
-                Console.WriteLine("Inserted into the client table");
+                Console.WriteLine("client deleted from the client table");
             }
 
         }
@@ -47,7 +43,7 @@ public class DeleteDatabase
     }
 
     // Method for Inserting into Client Table
-    public void InsertCasesTable(String caseNumber, String caseTitle, String caseDescription, String caseStatus, String dateFiled, String dateClosed, String clientID)
+    public void InsertCasesTable(Int32 caseID)
     {
         // Error Handling
         try
@@ -66,21 +62,15 @@ public class DeleteDatabase
                 var command = connection.CreateCommand();
 
                 // SQL Query to Create Table
-                command.CommandText = @"
-                    INSERT INTO cases (case_number, case_title, case_description, case_status, date_filed, date_closed, client_id) VALUES (@caseNumber, @caseTitle, @caseDescription, @caseStatus, @dateFiled, @dateClosed, @clientID)";
+                command.CommandText = @"DELETE FROM cases WHERE case_id = @caseid";
 
-                command.Parameters.AddWithValue("@case_number", caseNumber);
-                command.Parameters.AddWithValue("@case_title", caseTitle);
-                command.Parameters.AddWithValue("@case_description", caseDescription);
-                command.Parameters.AddWithValue("@case_status", caseStatus);
-                command.Parameters.AddWithValue("@date_filed", dateFiled);
-                command.Parameters.AddWithValue("@date_closed", dateClosed);
-                command.Parameters.AddWithValue("@client_id", clientID);
+                command.Parameters.AddWithValue("@caseid", caseID);
+
 
                 // Executing Query that is not expected to return results
                 command.ExecuteNonQuery();
 
-                Console.WriteLine("Inserted into the Case table");
+                Console.WriteLine("Deleted case from the Case table");
             }
 
         }
@@ -91,7 +81,7 @@ public class DeleteDatabase
 
     }
 
-    public void InsertDocumentTable(Int32 caseid, String documentName, String documentType, String documentPath)
+    public void InsertDocumentTable(Int32 documentid)
     {
         // Error Handling
         try
@@ -110,18 +100,14 @@ public class DeleteDatabase
                 var command = connection.CreateCommand();
 
                 // SQL Query to Create Table
-                command.CommandText = @"
-                    INSERT INTO documents (case_id, document_name, document_type, document_path) VALUES (@caseid, @documentName, @documentType, @documentPath)";
+                command.CommandText = @"DELETE FROM documents WHERE document_id = @documentid";
 
-                command.Parameters.AddWithValue("@case_id", caseid);
-                command.Parameters.AddWithValue("@document_name", documentName);
-                command.Parameters.AddWithValue("@document_type", documentType);
-                command.Parameters.AddWithValue("document_path", documentPath);
+                command.Parameters.AddWithValue("@documentid", documentid);
 
                 // Executing Query that is not expected to return results
                 command.ExecuteNonQuery();
 
-                Console.WriteLine("Inserted into the Document table");
+                Console.WriteLine("Document deleted from the Document table");
             }
 
         }
@@ -132,7 +118,7 @@ public class DeleteDatabase
 
     }
 
-    public void InsertDateTable(Int32 dateid, Int32 caseid, String eventDate, String eventDescription)
+    public void InsertDateTable(Int32 dateid)
     {
         // Error Handling
         try
@@ -151,18 +137,14 @@ public class DeleteDatabase
                 var command = connection.CreateCommand();
 
                 // SQL Query to Create Table
-                command.CommandText = @"
-                    INSERT INTO important_dates (date_id, case_id, event_date, event_description) VALUES (@dateid, @caseid, @eventDate, @eventDescription)";
+                command.CommandText = @"DELETE FROM important_dates WHERE date_id = @dateid";
 
-                command.Parameters.AddWithValue("@date_id", dateid);
-                command.Parameters.AddWithValue("@case_id", caseid);
-                command.Parameters.AddWithValue("@event_date", eventDate);
-                command.Parameters.AddWithValue("@event_description", eventDescription);
+                command.Parameters.AddWithValue("@dateid", dateid);
 
                 // Executing Query that is not expected to return results
                 command.ExecuteNonQuery();
 
-                Console.WriteLine("Inserted into the Dates table");
+                Console.WriteLine("Deleted date from the Dates table");
             }
 
         }
