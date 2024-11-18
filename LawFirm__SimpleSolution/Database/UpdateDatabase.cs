@@ -106,7 +106,7 @@ public class UpdateDatabase
 
     }
 
-    public void InsertDocumentTable(Int32 caseid, String documentName, String documentType, String documentPath)
+    public void UpdateDocumentTable(Int32 documentid,Int32 caseid, String documentName, String documentType, String documentPath)
     {
         // Error Handling
         try
@@ -129,8 +129,10 @@ public class UpdateDatabase
                     UPDATE documents SET case_id = @caseid,
                                          document_name = @documentName,
                                          document_type = @documentType,
-                                         document_path = @documentPath";
+                                         document_path = @documentPath
+                    WHERE document_id = @documentid";
 
+                command.Parameters.AddWithValue("@document_id", documentid);
                 command.Parameters.AddWithValue("@case_id", caseid);
                 command.Parameters.AddWithValue("@document_name", documentName);
                 command.Parameters.AddWithValue("@document_type", documentType);
