@@ -29,6 +29,31 @@ class MainRun
                 break;
             case 2:
                 Console.WriteLine("You have Chosen to Read Entry");
+                Console.WriteLine("Which data do you want to Read?");
+                Console.WriteLine("[1] - Clients");
+                Console.WriteLine("[2] - Cases");
+                Console.WriteLine("[3] - Documents");
+                Console.WriteLine("[4] - Dates");
+
+                int userOptionRead = Convert.ToInt32(Console.ReadLine());
+                switch (userOptionRead)
+                {
+                    case 1:
+                        readDatabase.ReadClientsTable();
+                        break;
+
+                    case 2:
+                        readDatabase.ReadCasesTable();
+                        break;
+
+                    case 3:
+                        readDatabase.ReadDocumentTable();
+                        break;
+
+                    case 4:
+                        readDatabase.ReadDateTable();
+                        break;
+                }
                 readDatabase.ReadClientsTable();
                 break;
             
