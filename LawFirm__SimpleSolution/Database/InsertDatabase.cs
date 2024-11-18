@@ -132,7 +132,7 @@ public class InsertDatabase
 
     }
 
-    public void InsertDateTable(Int32 dateid, Int32 caseid, String eventDate, String eventDescription)
+    public void InsertDateTable(Int32 caseid, String eventDate, String eventDescription)
     {
         // Error Handling
         try
@@ -152,9 +152,8 @@ public class InsertDatabase
 
                 // SQL Query to Create Table
                 command.CommandText = @"
-                    INSERT INTO important_dates (date_id, case_id, event_date, event_description) VALUES (@dateid, @caseid, @eventDate, @eventDescription)";
+                    INSERT INTO important_dates (case_id, event_date, event_description) VALUES (@caseid, @eventDate, @eventDescription)";
 
-                command.Parameters.AddWithValue("@date_id", dateid);
                 command.Parameters.AddWithValue("@case_id", caseid);
                 command.Parameters.AddWithValue("@event_date", eventDate);
                 command.Parameters.AddWithValue("@event_description", eventDescription);
