@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LawFirm__SimpleSolution")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c25ffb5cac3d627f8b928a1e8f3f84f17c31bd0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8efd9c30edeb8760874167a6ffdca894e9c9d4a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LawFirm__SimpleSolution")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LawFirm__SimpleSolution")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
