@@ -1,18 +1,22 @@
 ﻿using LawFirm__SimpleSolution.Database;
-
+using System.Threading;
 namespace LawFirm__SimpleSolution;
 
 class MainRun
 {
     static void Main(string[] args)
     {
+        Thread thread1 = Thread.CurrentThread;
+        thread1.Start();
         CreateDatabase createDatabase = new CreateDatabase();
         InsertDatabase insertData = new InsertDatabase();
         ReadDatabase readDatabase = new ReadDatabase();
         UpdateDatabase updateDatabase = new UpdateDatabase();
         DeleteDatabase deleteDatabase = new DeleteDatabase();
         createDatabase.createTables();
-        
+
+        Thread thread2 = Thread.CurrentThread;
+        thread2.Start();
         Console.WriteLine("Welcome to Law's Firm Management System");
         Console.WriteLine("What would you like to do?");
         Console.WriteLine("[1] - Create Entry");
